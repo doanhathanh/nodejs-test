@@ -1,11 +1,24 @@
 ## SETUP ESLINT
-1. npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
-2. touch .eslintignore
-```node_modules
+1. Install eslint
+```bash
+npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+2. Create .eslintignore file
+```bash
+touch .eslintignore
+```
+Enter:
+```
+node_modules
 dist
 ```
-3. touch .eslintrc
-```{
+3. Create .eslintrc file
+```bash
+touch .eslintrc
+```
+Enter:
+```
+{
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": [
@@ -37,7 +50,8 @@ dist
 }
 ```
 4. Add line (2) into package.json
-```1."scripts": {
+```
+1."scripts": {
 2.  "check": "eslint src --fix --ext .ts",
 3.}
 ```
@@ -48,18 +62,28 @@ npm run check
 ```
 
 ## SETUP PRETTIER
-1. npm install --save-dev prettier
-2. npm install --save-dev eslint-config-prettier eslint-plugin-prettier
-3. touch ..prettierrc
-```{
+1. Install prettier
+```bash
+npm install --save-dev prettier
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+```
+2. Create .prettierrc file
+```bash
+touch .prettierrc
+```
+Enter:
+```
+{
   "semi": true,
   "trailingComma": "none",
   "singleQuote": true,
   "printWidth": 120
-}```
+}
+```
 
-4. modify .eslintrc
-```{
+3. modify .eslintrc file
+```
+{
   "plugins": [
     "prettier" <-- add this line
   ],
